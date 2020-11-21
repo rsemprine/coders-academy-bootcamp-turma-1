@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace CodersAcademy.API.Model
 {
-    public class Music
+    public class UserFavoriteMusic
     {
         public Guid Id { get; set; }
-        public string Name { get; set; }
-        public int Duration { get; set; }
+        public Guid MusicId { get; set; }
+        public Guid UserId { get; set; }
+        public Music Music { get; set; }
 
         [JsonIgnore]
-        public Album Album { get; set; }
+        public User User { get; set; }
     }
 }
